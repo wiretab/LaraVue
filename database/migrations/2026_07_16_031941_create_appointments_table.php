@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->deleteOnCascade();
+            $table->foreignId('provider_id')->constrained()->deleteOnCascade();
+            $table->foreignId('appointment_type_id')->constrained()->cascadeOnDelete();
+
+            $table->datetime('starts_at');
+            $table->datetime('ends_at');
+            $table->string('status');
+
+            $table->text('notes');
             $table->timestamps();
         });
     }
