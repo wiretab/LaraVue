@@ -9,8 +9,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 #[Fillable(['starts_at', 'ends_at', 'status', 'notes'])]
 class Appointment extends Model
 {
-
-
     public function provider(): BelongsTo {
         return $this->belongsTo(Provider::class);
     }
