@@ -26,10 +26,10 @@ class ProviderSeeder extends Seeder
                 'email' => 'gordon.freeman@loltest.com',
                 'name' => 'Gordon Freeman'
             ],
-            
+
         ];
-    
-        foreach($providers as $provider) {
+
+        foreach ($providers as $provider) {
             Provider::create($provider);
         }
     }
