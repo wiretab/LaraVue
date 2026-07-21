@@ -13,10 +13,6 @@ class Patient extends Model
 {
     use HasFactory;
 
-    // protected $casts = [
-    //     'dob' => 'date:Y-m-d'
-    // ];
-
     public function providers(): HasManyThrough {
         return $this->hasManyThrough(Provider::class, Appointment::class);
     }
