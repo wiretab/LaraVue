@@ -53,8 +53,8 @@ class AppointmentTypeSeeder extends Seeder
             
         ];
 
-        foreach($types as $appt_type) {
-            AppointmentType::firstOrCreate($appt_type);
+        foreach($types as $appointmentType) {
+            AppointmentType::firstOrCreate($appointmentType);
         }
     }
 }
