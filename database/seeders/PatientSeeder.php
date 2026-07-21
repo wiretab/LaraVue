@@ -40,7 +40,7 @@ class PatientSeeder extends Seeder
                 'dob' => '1948-09-04'
             ],
             [
-                'name' => 'Antony Dyatlov',
+                'name' => 'Anatoly Dyatlov',
                 'gender' => 'male',
                 'dob' => '1939-07-30'
             ]
