@@ -10,6 +10,11 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 #[Fillable(['name', 'gender', 'dob'])]
 class Patient extends Model
 {
+
+    // protected $casts = [
+    //     'dob' => 'date:Y-m-d'
+    // ];
+
     public function providers(): HasManyThrough {
         return $this->hasManyThrough(Provider::class, Appointment::class);
     }

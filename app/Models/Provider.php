@@ -22,5 +22,8 @@ class Provider extends Model
         return $this->hasManyThrough(Patient::class, Appointment::class);
     }
 
+    public function appointment_types(): HasMany {
+        return $this->hasMany(AppointmentType::class);
+    }
 
 }

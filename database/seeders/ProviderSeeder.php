@@ -30,7 +30,7 @@ class ProviderSeeder extends Seeder
         ];
 
         foreach ($providers as $provider) {
-            Provider::create($provider);
+            Provider::firstOrCreate($provider);
         }
     }
 }
