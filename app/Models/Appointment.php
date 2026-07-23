@@ -3,12 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 #[Fillable(['starts_at', 'ends_at', 'status', 'notes'])]
 class Appointment extends Model
 {
+    use HasFactory;
+
     public function provider(): BelongsTo {
         return $this->belongsTo(Provider::class);
     }
