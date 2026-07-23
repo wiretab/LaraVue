@@ -20,7 +20,7 @@ return new class extends Migration
             $table->datetime('ends_at');
             $table->string('status');
 
-            $table->text('notes');
+            $table->text('notes')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
