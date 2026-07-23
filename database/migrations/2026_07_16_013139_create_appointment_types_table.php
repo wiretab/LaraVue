@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('appointment_types', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('provider_id')->constrained()->cascadeOnDelete();
             $table->string('name');
             $table->integer('duration_minutes');
             $table->integer('buffer_before');
